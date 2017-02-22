@@ -1,0 +1,7 @@
+# ROUTER_PATH = '../views/'
+
+[[R]]
+name = "hello"
+title = "hello"
+path = "/hello"
+router = "hello"

@@ -3,5 +3,5 @@
 [[R]]
 name = "hello"
 title = "hello"
-path = "/hello"
-router = "hello"
+path = "/"
+router = "template"

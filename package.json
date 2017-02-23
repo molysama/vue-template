@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "flex.css": "^1.1.6",
     "lodash": "^4.17.4",
     "mockjs": "^1.0.1-beta3",
     "pug": "^2.0.0-beta11",

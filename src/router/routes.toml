@@ -4,4 +4,5 @@
 name = "hello"
 title = "hello"
 path = "/"
-router = "template"
+router = "index"
+  

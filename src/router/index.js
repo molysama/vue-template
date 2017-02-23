@@ -1,30 +1,29 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import _ from 'lodash/object'
+import _ from 'lodash/fp'
 
 // 载入路由表配置
 import { R } from './routes.toml'
 
 Vue.use(VueRouter)
 
-// const routes = R && R.map(route => createRoute(route))
-const routes = R && R.map(createRoute)
+const routes = _.map(createRoute)(R)
 
-// 编译路由
+/**
+ * 生成路由
+ */
 function createRoute(route) {
 
-  const result = _.pick(route, ['name', 'path', 'alias', 'redirect', 'meta'])
-  result.component = resolve => require(['../views/' + route.router], resolve)
-
-  // 如果存在子路由
-  if (route.child) {
-    result.children = route.child.map(createRoute)
-  }
+  // 路由可能含有的属性
+  const data = ['name', 'path', 'alias', 'redirect', 'meta']
+  const result = _.pick(data)(route)
+  
+  result.component = require('../views/' + route.router)
+  result.children = _.map(createRoute)(route.children)
 
   return result
 }
 
-const Router = new VueRouter({
+export default new VueRouter({
   routes
 })
-export default Router

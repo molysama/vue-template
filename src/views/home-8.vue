@@ -7,7 +7,7 @@
       img(src="../assets/list.png").logo 
       .text BLOCKS
       img(src="../assets/icon.png").icon
-    input(type="text", value="Email")
+    input(type="text", placeholder="Email", v-model="input")
     .button SEND
   .base 
     .title
@@ -20,6 +20,14 @@
 
 </template>
 <script>
+
+export default {
+  data () {
+    return {
+      input: '' 
+    }
+  }
+}
   
 </script>
 <style lang="stylus" scoped>
@@ -61,6 +69,12 @@
     color #595f6f
     font-size 0.28rem
     font-weight 400
+    &::placeholder 
+      color #595f6f
+      font-size 0.28rem
+      font-weight 400
+
+      
   .button 
     margin 0 auto
     margin-top 0.4rem

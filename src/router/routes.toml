@@ -1,8 +1,13 @@
 # ROUTER_PATH = '../views/'
 
 [[R]]
-name = "hello"
-title = "hello"
-path = "/"
-router = "home-8"
+name = "login"
+title = "login"
+path = "/login"
+router = "login"
   
+[[R]]
+name = "index"
+title = "index"
+path = "/"
+router = "index"

@@ -8,7 +8,7 @@
       .text BLOCKS
       img(src="../assets/icon.png").icon
     input(type="text", placeholder="Email", v-model="input")
-    .button SEND
+    .button(@click.prevent="login") LOGIN
   .base 
     .title
       span Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. 
@@ -26,7 +26,17 @@ export default {
     return {
       input: '' 
     }
+  }, 
+  methods: {
+    login () {
+      if (this.input) {
+        this.$router.push('/')
+      } else {
+        alert('email不能为空')
+      }
+    }
   }
+  
 }
   
 </script>

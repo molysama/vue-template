@@ -13,6 +13,12 @@ import mock from './api/mock'
 /* vuex */
 import store from './store'
 
+import * as types from './store/types'
+
+// 避免刷新清空vuex数据, 实际使用时应为window.sessionStoreage
+if (window.localStorage.userInfo) {
+  store.dispatch(types.setUserInfo, JSON.parse(window.localStorage.userInfo))
+}
 
 // 验证登录
 router.beforeEach((to, from, next) => {
@@ -24,7 +30,7 @@ router.beforeEach((to, from, next) => {
     } else {
       next({
         path: '/login',
-        query: { redirect: to.fullPath }
+        // query: { redirect: to.fullPath }
       })
     }
     

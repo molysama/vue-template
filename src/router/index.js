@@ -15,7 +15,7 @@ const routes = _.map(createRoute)(R)
 function createRoute(route) {
 
   // 路由可能含有的属性
-  const data = ['name', 'path', 'alias', 'redirect', 'meta']
+  const data = ['name', 'path', 'alias', 'redirect', 'meta', 'query']
   const result = _.pick(data)(route)
   
   result.component = require('../views/' + route.router)

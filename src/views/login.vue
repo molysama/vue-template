@@ -4,7 +4,7 @@
 .body
   m-header
   .main
-    input(type="text", placeholder="Email", v-model="input")
+    input(type="text", placeholder="随便写一个", v-model="input")
     .button(@click.prevent="login") 登录
   .base 
     .title

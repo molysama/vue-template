@@ -11,3 +11,5 @@ name = "index"
 title = "index"
 path = "/"
 router = "index"
+[R.meta]
+requiresAuth = true

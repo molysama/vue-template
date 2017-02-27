@@ -5,8 +5,8 @@
   m-header
   .main
     .content
-      input(placeholder="Full Name")
-      input(placeholder="Last Name")
+      input(placeholder="Full Name", v-model="user.name")
+      input(placeholder="Last Name", v-model="user.age")
       input(placeholder="Password")
       input(placeholder="Confirm Password")
     .iconwrap
@@ -20,6 +20,18 @@
 
 </template>
 <script>
+
+import { mapGetters } from 'vuex'
+import * as types from '../store/types' 
+
+export default {
+  computed: {
+    ...mapGetters({
+      user: types.getUserInfo
+    })
+  }
+
+}
   
 </script>
 <style lang="stylus" scoped>

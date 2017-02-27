@@ -1,0 +1,2 @@
+
+export const getUserInfo = 'getUserInfo'

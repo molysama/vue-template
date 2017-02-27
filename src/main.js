@@ -10,10 +10,14 @@ import components from './components/'
 /* mock */
 import mock from './api/mock'
 
+/* vuex */
+import store from './store'
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: { App },
+  store
 })

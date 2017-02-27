@@ -2,13 +2,10 @@
 <template lang="jade">
 
 .body
+  m-header
   .main
-    .header
-      img(src="../assets/list.png").logo 
-      .text BLOCKS
-      img(src="../assets/icon.png").icon
     input(type="text", placeholder="Email", v-model="input")
-    .button(@click.prevent="login") LOGIN
+    .button(@click.prevent="login") 登录
   .base 
     .title
       span Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. 
@@ -21,6 +18,9 @@
 </template>
 <script>
 
+import * as api from '../api/user'
+import * as types from '../store/types'
+
 export default {
   data () {
     return {
@@ -30,7 +30,14 @@ export default {
   methods: {
     login () {
       if (this.input) {
-        this.$router.push('/')
+        api.getUserInfo().then(res => {
+          if (res.data) {
+            this.$store.dispatch(types.setUserInfo, res.data)
+            this.$router.push('/')
+          }
+        })
+        .catch(error => alert('获取用户信息失败: ' + error))
+        
       } else {
         alert('email不能为空')
       }
@@ -52,24 +59,10 @@ export default {
   background #595f6f
   width 100%
   overflow hidden
-  .header 
-    box-sizing border-box
-    width 100%
-    margin-top 0.79rem
-    padding 0 0.4rem
-    height 0.42rem 
-    line-height @height
-    display flex
-    flex-flow row nowrap
-    justify-content space-between
-    .logo, .text, .icon
-      max-height @height
-      font-size 0.3rem
-      color #fff
   input 
     text-align center
     margin 0 auto
-    margin-top 6rem
+    margin-top 4.6rem
     width 78.666%
     height 1rem 
     line-height @height
@@ -83,8 +76,6 @@ export default {
       color #595f6f
       font-size 0.28rem
       font-weight 400
-
-      
   .button 
     margin 0 auto
     margin-top 0.4rem
@@ -113,7 +104,6 @@ export default {
     line-height 0.4rem
   .pagination
     margin 0 auto
-    margin-top 0.65rem
     margin-bottom 0.5rem
     height 0.1rem
     display flex

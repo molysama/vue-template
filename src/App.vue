@@ -16,6 +16,10 @@ export default {
 // 微信自动放大字体解决办法
 * 
   max-height 100000px
+html {
+  height 100%
+  background-color #ececed
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -1,4 +1,4 @@
-# vue2-webpack
+# vue  for mobile
 
 > A Vue.js project
 

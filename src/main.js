@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import FastClick from 'fastclick'
 
 /* components */
 import components from './components/'
@@ -14,6 +15,8 @@ import mock from './api/mock'
 import store from './store'
 
 import * as types from './store/types'
+
+FastClick.attach(document.body)
 
 // 避免刷新清空vuex数据, 实际使用时应为window.sessionStoreage
 if (window.localStorage.userInfo) {

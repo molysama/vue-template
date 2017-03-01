@@ -8,6 +8,10 @@ import mintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(mintUI)
 
+/* filters */
+import * as filters from './filters'
+Object.keys(filters).forEach(k => Vue.filter(k, filters[k]))
+
 /* components */
 import components from './components/'
 
@@ -15,9 +19,9 @@ import components from './components/'
 import mock from './api/mock'
 
 /* vuex */
+import * as types from './store/types'
 import store from './store'
 
-import * as types from './store/types'
 
 FastClick.attach(document.body)
 

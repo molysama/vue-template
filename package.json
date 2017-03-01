@@ -20,6 +20,7 @@
     "mockjs": "^1.0.1-beta3",
     "pug": "^2.0.0-beta11",
     "stylus": "^0.54.5",
+    "timeago.js": "^2.0.5",
     "toml": "^2.3.2",
     "vue": "^2.1.10",
     "vue-router": "^2.2.0",

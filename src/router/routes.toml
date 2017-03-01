@@ -13,3 +13,11 @@ path = "/"
 router = "index"
 [R.meta]
 requiresAuth = true
+
+[[R]]
+name = "tabbar"
+title = "mint-tabbar"
+path = "/mint-tabbar"
+router = "mint/tabbar"
+[R.meta]
+requiresAuth = true

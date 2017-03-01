@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import FastClick from 'fastclick'
+import mintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(mintUI)
 
 /* components */
 import components from './components/'

@@ -15,7 +15,7 @@
       .item g+
   .base
     span.title Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementu.
-    button 登录
+    button(@click="$router.push('/mint-tarbar')") 开始
 
 
 </template>

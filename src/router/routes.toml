@@ -10,7 +10,7 @@ router = "login"
 name = "index"
 title = "index"
 path = "/"
-router = "index"
+router = "hospital/index"
 [R.meta]
 requiresAuth = true
 

@@ -57,7 +57,6 @@ export default {
   width 100%
   overflow hidden
 .main 
-  font-family Lato
   font-weight 700
   background #595f6f
   width 100%

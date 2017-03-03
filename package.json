@@ -22,6 +22,7 @@
     "timeago.js": "^2.0.5",
     "toml": "^2.3.2",
     "vue": "^2.1.10",
+    "vue-awesome": "^2.1.0",
     "vue-router": "^2.2.0",
     "vuex": "^2.1.2"
   },
@@ -81,7 +82,8 @@
     "webpack-bundle-analyzer": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0",
     "webpack-hot-middleware": "^2.16.1",
-    "webpack-merge": "^2.6.1"
+    "webpack-merge": "^2.6.1",
+    "xml-loader": "^1.1.0"
   },
   "engines": {
     "node": ">= 4.0.0",

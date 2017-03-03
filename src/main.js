@@ -8,6 +8,11 @@ import mintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(mintUI)
 
+/* svg icon */
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon.vue'
+Vue.component('icon', Icon)
+
 /* filters */
 import * as filters from './filters'
 Object.keys(filters).forEach(k => Vue.filter(k, filters[k]))

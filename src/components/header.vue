@@ -23,8 +23,9 @@
   flex-flow row nowrap
   justify-content space-between
   .logo, .text, .icon
-    max-height @height
     font-size 0.3rem
     color #fff
+  .icon, .logo
+    height 0.42rem
   
 </style>

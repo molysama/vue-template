@@ -11,6 +11,7 @@ const routes = _.map(createRoute)(R)
 
 /**
  * 生成路由
+ * @param route 单个路由信息
  */
 function createRoute(route) {
 

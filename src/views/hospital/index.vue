@@ -96,7 +96,7 @@ section
     align-items center
     justify-content space-around
     .item 
-      width 1.12rem 
+      width 1.1rem 
       height 1.26rem
       .icon 
         margin 0 auto
@@ -106,7 +106,7 @@ section
         background #74a3e8
       p 
         margin-top 0.2rem
-        font-size 0.28rem
+        font-size 0.275rem
         font-weight 500
         color #404040
       

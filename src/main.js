@@ -30,9 +30,9 @@ import store from './store'
 
 FastClick.attach(document.body)
 
-// 避免刷新清空vuex数据, 实际使用时应为window.sessionStoreage
-if (window.localStorage.userInfo) {
-  store.dispatch(types.setUserInfo, JSON.parse(window.localStorage.userInfo))
+// 避免刷新清空vuex数据
+if (window.sessionStorage.userInfo) {
+  store.dispatch(types.setUserInfo, JSON.parse(window.sessionStorage.userInfo))
 }
 
 // 验证登录

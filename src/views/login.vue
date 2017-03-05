@@ -35,7 +35,7 @@ export default {
             this.$store.dispatch(types.setUserInfo, res.data)
 
             // 处理刷新丢失vuex数据
-            window.localStorage.setItem('userInfo', JSON.stringify(res.data))
+            window.sessionStorage.setItem('userInfo', JSON.stringify(res.data))
             this.$router.push('/')
           }
         })

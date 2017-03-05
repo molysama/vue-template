@@ -5,8 +5,8 @@
   m-header
   .main
     .content
-      input(placeholder="Full Name", v-model="user.name")
-      input(placeholder="Last Name", v-model="user.age")
+      input(placeholder="Full Name", v-model="userInfo.name")
+      input(placeholder="Last Name", v-model="userInfo.age")
       input(placeholder="Password")
       input(placeholder="Confirm Password")
     .iconwrap
@@ -27,7 +27,7 @@ import * as types from '../store/types'
 export default {
   computed: {
     ...mapGetters({
-      user: types.getUserInfo
+      userInfo: types.getUserInfo
     })
   }
 

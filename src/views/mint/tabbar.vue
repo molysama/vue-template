@@ -26,7 +26,7 @@
       icon(slot="icon", name="window-maximize")
       |订单
     mt-tab-item(id="发现")
-      icon(slot="icon", name="comment-o")
+      icon(slot="icon", name="search")
       |发现
     mt-tab-item(id="我的")
       icon(slot="icon", name="user-o")
@@ -65,6 +65,8 @@ export default {
     border-top 0.01rem solid #26a2ff
   
 .tabbar 
+  .mint-tab-item
+    box-sizing border-box
   svg 
     display block
   

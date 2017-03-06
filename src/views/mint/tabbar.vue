@@ -61,12 +61,11 @@ export default {
     height 100%
     padding-bottom 1rem
   .is-selected
-    background-color inherit!important
-    border-top 0.01rem solid #26a2ff
+    background inherit!important
+    // border-top 0.01rem solid #26a2ff
+    // border-color #26a2ff
   
 .tabbar 
-  .mint-tab-item
-    box-sizing border-box
   svg 
     display block
   

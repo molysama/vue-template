@@ -8,7 +8,7 @@
       mt-cell(class="page-part", title="当前选中", :value="selected")
     mt-tab-container(class="page-tabbar-container", v-model="selected")
       mt-tab-container-item(id="外卖")
-        mt-cell(v-for="n in 10", :title="'外卖' + n")
+        mt-cell(v-for="n in 10", :title="'外卖' + n", @click.native="consoleThis($event)")
       mt-tab-container-item(id="订单")
         mt-cell(v-for="n in 5", :title="'订单' + n")
       mt-tab-container-item(id="发现")
@@ -18,18 +18,18 @@
           mt-cell(v-for="n in 12", :title="'我的' + n")
         router-link(to="/")
           mt-button(type="danger", size="large") 退出
-  mt-tabbar(v-model="selected", fixed) 
+  mt-tabbar(v-model="selected", fixed).tabbar
     mt-tab-item(id="外卖")
-      img(slot="icon", src="../../assets/bgi.png")
+      icon(slot="icon", name="bandcamp")
       |外卖
     mt-tab-item(id="订单")
-      img(slot="icon", src="../../assets/bgi.png")
+      icon(slot="icon", name="window-maximize")
       |订单
     mt-tab-item(id="发现")
-      img(slot="icon", src="../../assets/bgi.png")
+      icon(slot="icon", name="comment-o")
       |发现
     mt-tab-item(id="我的")
-      img(slot="icon", src="../../assets/bgi.png")
+      icon(slot="icon", name="user-o")
       |我的
 
 </template>
@@ -40,6 +40,11 @@ export default {
   data () {
     return {
       selected: '外卖'
+    }
+  },
+  methods: {
+    consoleThis ($event) {
+      alert($event.target.innerText)
     }
   }
 }
@@ -57,5 +62,11 @@ export default {
     padding-bottom 1rem
   .is-selected
     background-color inherit!important
+    border-top 0.01rem solid #26a2ff
+  
+.tabbar 
+  svg 
+    display block
+  
   
 </style>

@@ -25,10 +25,12 @@ import { mapGetters } from 'vuex'
 import * as types from '../store/types' 
 
 export default {
-  computed: {
-    ...mapGetters({
-      userInfo: types.getUserInfo
-    })
+  data () {
+    return {
+      ...mapGetters({
+        userInfo: types.getUserInfo
+      })
+    }
   }
 
 }

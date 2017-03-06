@@ -20,6 +20,9 @@ html {
   height 100%
   background-color #ececed
 }
+a {
+  text-decoration none
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

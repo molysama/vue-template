@@ -6,18 +6,18 @@ title = "login"
 path = "/login"
 router = "login"
   
-[[R]]
-name = "index"
-title = "index"
-path = "/"
-router = "hospital/index"
-[R.meta]
-requiresAuth = true
+# [[R]]
+# name = "index"
+# title = "index"
+# path = "/"
+# router = "hospital/index"
+# [R.meta]
+# requiresAuth = true
 
 [[R]]
 name = "tabbar"
 title = "mint-tabbar"
-path = "/mint-tabbar"
+path = "/"
 router = "mint/tabbar"
 [R.meta]
 requiresAuth = true

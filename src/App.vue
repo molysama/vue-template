@@ -7,35 +7,14 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  mounted () {
+    document.getElementById('loaders').style.display = 'none'
+  }
 }
 </script>
 
-<style lang="stylus" >
+<style lang="stylus">
+ @import './styles/app.styl'
 
-// 微信自动放大字体解决办法
-* 
-  max-height 100000px
-html {
-  height 100%
-  background-color #ececed
-}
-a {
-  text-decoration none
-}
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-// iconfont svg
-.icon {
-       width: 1em; height: 1em;
-       vertical-align: -0.15em;
-       fill: currentColor;
-       overflow: hidden;
-}
 </style>

@@ -9,7 +9,9 @@
 export default {
   name: 'app',
   mounted () {
-    document.getElementById('loaders').style.display = 'none'
+    setTimeout(function(){
+      document.getElementById('loaders').style.display = 'none'
+    }, 500)
   }
 }
 </script>

@@ -6,9 +6,9 @@ import router from './router'
 import FastClick from 'fastclick'
 
 /* svg icon */
-import 'vue-awesome/icons'
-import Icon from 'vue-awesome/components/Icon.vue'
-Vue.component('icon', Icon)
+// import 'vue-awesome/icons'
+// import Icon from 'vue-awesome/components/Icon.vue'
+// Vue.component('icon', Icon)
 
 /* filters */
 import * as filters from './filters'

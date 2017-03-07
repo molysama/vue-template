@@ -37,8 +37,8 @@ html, body {
 .loader-double {
   border-radius: 50px;
   border: 6px solid transparent;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
+  border-top-color: deepskyblue;
+  border-bottom-color: deepskyblue;
   -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
 }

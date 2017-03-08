@@ -1,7 +1,7 @@
 
 <template lang="jade">
 
-.box
+.box(:class="type")
 
 </template>
 <style lang="stylus" scoped>
@@ -13,13 +13,16 @@
   box-sizing border-box
   width box-size
   height @width
-  // border-radius 5%
-  // background rgba(18, 18, 18, 1)
   background transparent
   transition background 1.2s ease
-  &:hover 
-    background #191919
-    transition background 0s
+.normal:hover
+  background #191919
+  transition background 0s
+.specia
+  background #35A8C3
+  border-radius 5%
+
+
 
 
 </style>
@@ -34,6 +37,12 @@ export default {
   methods: {
     mouseOut () {
       console.log('out')
+    }
+  },
+  props: {
+    type: {
+      type: String,
+      default: 'normal'
     }
   }
 

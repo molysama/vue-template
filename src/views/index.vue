@@ -1,7 +1,7 @@
 
 <template lang="jade">
 
-.body 
+.body(id="boxWrap")
   m-box(v-for="box in wrap.boxes", :key="box.index", :type="box.type", @click.native="toSpecia(box.index)").box
 
 </template>
@@ -19,6 +19,8 @@ function initWrap () {
   const col = Math.floor(height / size)
   const allRow = Math.ceil(width / size)
   const allCol = Math.ceil(height / size)
+  
+  document.getElementById('boxWrap').style.width = allRow * size + 'px'
   
   return {
     col: col-1,
@@ -86,28 +88,11 @@ export default {
 <style lang="stylus" scoped>
 @import '../styles/main.styl'
 
-.pikibox
-  display inline-block
-  width 100%
-  height 100%
-  transition background-color 0.8s ease
-  margin-top -3px 
-  z-index -3
-  &:hover 
-    background-color #655
-    transition background-color 0 ease-in-out
-    opacity 0.7
 
 .body 
   font-size 0px
-  width 100%
   height 100%
-  overflow hidden
 .box 
   display inline-block
   font-size 16px
-.box1 
-  position absolute 
-  top 2*box-size
-  left @top
 </style>

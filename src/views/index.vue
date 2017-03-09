@@ -15,12 +15,12 @@ function initWrap () {
   const width = document.getElementById('app').clientWidth
   const height = document.getElementById('app').clientHeight
   
-  const row = Math.floor(width / size)
-  const col = Math.floor(height / size)
-  const allRow = Math.ceil(width / size)
-  const allCol = Math.ceil(height / size)
+  const col = Math.floor(width / size)
+  const row = Math.floor(height / size)
+  const allCol = Math.ceil(width / size)
+  const allRow = Math.ceil(height / size)
   
-  document.getElementById('boxWrap').style.width = allRow * size + 'px'
+  document.getElementById('boxWrap').style.width = allCol * size + 'px'
   
   return {
     col: col-1,
@@ -81,6 +81,7 @@ export default {
 
   //TODO create gooey
   //TODO add color box
+  //TODO limit creat
 
 }
   
